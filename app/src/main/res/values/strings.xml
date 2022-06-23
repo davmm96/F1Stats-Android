@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">F1 Stats</string>
+    <string name="navigation_races">Races</string>
+    <string name="navigation_favorites">Favorites</string>
+    <string name="navigation_settings">Settings</string>
+</resources>

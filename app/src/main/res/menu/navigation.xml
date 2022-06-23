@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/navigation_races"
+        android:icon="@drawable/races"
+        android:title="@string/navigation_races"/>
+
+    <item android:id="@+id/navigation_favorites"
+        android:icon="@drawable/ic_baseline_favorite_menu_24"
+        android:title="@string/navigation_favorites"/>
+
+    <item android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/navigation_settings"/>
+</menu>

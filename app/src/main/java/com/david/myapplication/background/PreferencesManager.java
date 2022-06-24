@@ -19,7 +19,7 @@ public class PreferencesManager {
     }
 
     public boolean isMusicEnabled(){
-        return getPreferences().getBoolean(MUSIC_STATE, false);
+        return getPreferences().getBoolean(MUSIC_STATE, true);
     }
 
     public void setMusicEnabled(boolean state){

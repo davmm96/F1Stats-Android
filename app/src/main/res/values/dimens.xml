@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="fragment_races_padding">24dp</dimen>
+    <dimen name="fragment_races_padding">20dp</dimen>
+    <dimen name="race_item_height">100dp</dimen>
+    <dimen name="race_item_corner">6dp</dimen>
+    <dimen name="race_item_margin">20dp</dimen>
+    <dimen name="race_favorite_size">20dp</dimen>
+    <dimen name="race_item_country_margin">30dp</dimen>
+    <dimen name="race_item_name_size">9sp</dimen>
+    <dimen name="race_item_name_margin">5dp</dimen>
+    <dimen name="race_item_arrow_size">20dp</dimen>
 </resources>

@@ -3,21 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:paddingEnd="@dimen/fragment_races_padding"
-    android:paddingStart="@dimen/fragment_races_padding"
-    android:paddingTop="@dimen/fragment_races_padding">
-
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="FAVORITES"/>
+    android:paddingTop="@dimen/fragment_races_padding"
+    android:background="@color/background_grey">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvRaces"
+        android:id="@+id/rvFavorites"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

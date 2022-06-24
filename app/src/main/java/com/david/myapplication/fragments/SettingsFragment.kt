@@ -40,7 +40,8 @@ class SettingsFragment: Fragment() {
 
         PreferencesManager(requireActivity()).isMusicEnabled = isChecked
 
-        if (isChecked) {
+        if (isChecked)
+        {
             requireActivity().startService(Intent(requireActivity(), MusicService::class.java))
         }
         else

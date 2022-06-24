@@ -13,11 +13,11 @@
         android:text="@string/navigation_settings"
         android:textColor="@color/primary"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:textSize="@dimen/settings_label_size"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginStart="@dimen/settings_margin"
+        android:layout_marginTop="@dimen/settings_margin"/>
 
     <TextView
         android:id="@+id/tvMusic"
@@ -25,11 +25,11 @@
         android:layout_height="wrap_content"
         android:text="Music"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="@dimen/music_text_size"
         app:layout_constraintTop_toBottomOf="@id/tvSettings"
         app:layout_constraintLeft_toLeftOf="@id/tvSettings"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginTop="@dimen/music_margin_top"
+        android:layout_marginLeft="@dimen/music_margin_left"/>
 
     <ImageView
         android:id="@+id/ivMusicOn"
@@ -39,20 +39,18 @@
         app:layout_constraintTop_toBottomOf="@id/tvMusic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/switchButton"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="@dimen/ivMusic_margin_top"
         app:layout_constraintHorizontal_chainStyle="spread"/>
-
 
     <Switch
         android:id="@+id/switchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="true"
-        android:textOff="Off"
-        android:textOn="On"
         app:layout_constraintTop_toTopOf="@id/ivMusicOn"
         app:layout_constraintStart_toEndOf="@id/ivMusicOn"
-        app:layout_constraintEnd_toStartOf="@id/ivMusicOff"/>
+        app:layout_constraintEnd_toStartOf="@id/ivMusicOff"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     <ImageView
         android:id="@+id/ivMusicOff"

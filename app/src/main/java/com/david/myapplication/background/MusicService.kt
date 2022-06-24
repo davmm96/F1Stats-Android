@@ -43,11 +43,4 @@ class MusicService : Service(), MediaPlayer.OnCompletionListener {
         mediaPlayer?.stop()
         mediaPlayer = null
     }
-
-    companion object {
-        const val NOTIFICATION_ID = 1 //Este ID nunca puede ser 0
-        const val NOTIFICATION_ID_CHANNEL = 2
-        const val NOTIFICATION_CHANNEL_ID = "MimoService"
-        const val channelName = "Media"
-    }
 }

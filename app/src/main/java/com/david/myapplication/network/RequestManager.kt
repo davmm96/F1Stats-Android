@@ -18,9 +18,7 @@ class RequestManager constructor(context: Context) {
             }
     }
 
-    val requestQueue: RequestQueue by lazy {
-        // applicationContext is key, it keeps you from leaking the
-        // Activity or BroadcastReceiver if someone passes one in.
+    private val requestQueue: RequestQueue by lazy {
         Volley.newRequestQueue(context.applicationContext)
     }
 

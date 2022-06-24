@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.fragment_races.*
 
 class RacesFragment : Fragment() {
 
-    private val url = "/races?type=race&season=2022"
+    private val url = getString(R.string.api_url_races)
     private val headers = mutableMapOf<String,String>()
     private lateinit var raceAdapter : RacesAdapter
 
@@ -35,7 +35,7 @@ class RacesFragment : Fragment() {
 
     private fun doRequest() {
 
-        headers["x-apisports-key"] = "034da704a4fcc0f36f7f6c59b86529ff"
+        headers[getString(R.string.apikey_header)] = getString(R.string.apikey)
 
         val gsonRequest = GsonRequest(url, Races::class.java, headers,
         {

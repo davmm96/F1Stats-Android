@@ -4,4 +4,7 @@
     <string name="navigation_favorites">Favorites</string>
     <string name="navigation_settings">Settings</string>
     <string name="races_error">Error obtaining data</string>
+    <string name="apikey_header">x-apisports-key</string>
+    <string name="apikey">034da704a4fcc0f36f7f6c59b86529ff</string>
+    <string name="api_url_races"><![CDATA[/races?type=race&season=2022]]></string>
 </resources>

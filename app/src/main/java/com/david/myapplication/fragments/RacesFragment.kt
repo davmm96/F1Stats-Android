@@ -10,8 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.david.myapplication.R
 import com.david.myapplication.RacesAdapter
-import com.david.myapplication.model.Companies
-import com.david.myapplication.model.Company
 import com.david.myapplication.model.Race
 import com.david.myapplication.model.Races
 import com.david.myapplication.network.GsonRequest
@@ -20,7 +18,7 @@ import kotlinx.android.synthetic.main.fragment_races.*
 
 class RacesFragment : Fragment() {
 
-    private val url = "https://v1.formula-1.api-sports.io/races?type=race&season=2022"
+    private val url = "/races?type=race&season=2022"
     private val headers = mutableMapOf<String,String>()
     private lateinit var raceAdapter : RacesAdapter
 
@@ -32,7 +30,6 @@ class RacesFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
         return inflater.inflate(R.layout.fragment_races, container, false)
     }
 

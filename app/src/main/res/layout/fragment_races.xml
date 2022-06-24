@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:paddingEnd="@dimen/fragment_races_padding"
     android:paddingTop="@dimen/fragment_races_padding"
+    android:paddingLeft="@dimen/fragment_races_padding"
     android:background="@color/background_grey">
 
     <androidx.recyclerview.widget.RecyclerView

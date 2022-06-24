@@ -20,7 +20,12 @@ android {
 
     buildTypes {
         release {
+            applicationIdSuffix ".pre"
             minifyEnabled false
+            buildConfigField "String", "API_HOST", "\"https://v1.formula-1.api-sports.io/\""
+            buildConfigField "String", "API_URL_RACES", "\"races?season=2022&type=race\""
+            buildConfigField "String", "API_KEY", "034da704a4fcc0f36f7f6c59b86529ff"
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -31,12 +36,16 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
 
     def room_version = "2.4.2"
-    
+
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
@@ -51,4 +60,7 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
+
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.code.gson:gson:2.8.9'
 }

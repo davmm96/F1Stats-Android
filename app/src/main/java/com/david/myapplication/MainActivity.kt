@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.david.myapplication.background.MusicService
 import com.david.myapplication.background.PreferencesManager
+import com.david.myapplication.fragments.CircuitsFragment
 import com.david.myapplication.fragments.FavoritesFragment
 import com.david.myapplication.fragments.RacesFragment
 import com.david.myapplication.fragments.SettingsFragment
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         val fragmentClicked : Fragment = when (it.itemId){
             R.id.navigation_races -> RacesFragment.newInstance()
             R.id.navigation_favorites -> FavoritesFragment.newInstance()
+            R.id.navigation_circuits -> CircuitsFragment.newInstance()
             else -> SettingsFragment.newInstance()
         }
 

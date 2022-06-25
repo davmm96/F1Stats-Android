@@ -6,12 +6,12 @@
     style="@style/LinearLayout">
 
     <TextView
-        android:id="@+id/tvSeason"
-        android:text="@string/seasontv"
+        android:id="@+id/tvCircuits"
+        android:text="@string/navigation_circuits"
         style="@style/TextPrimary.title"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvRaces"
+        android:id="@+id/rvCircuits"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         style="@style/RV"/>

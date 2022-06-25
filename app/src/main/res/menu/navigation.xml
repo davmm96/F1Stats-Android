@@ -4,6 +4,10 @@
         android:icon="@drawable/races"
         android:title="@string/navigation_races"/>
 
+    <item android:id="@+id/navigation_circuits"
+        android:icon="@drawable/circuit"
+        android:title="@string/navigation_circuits"/>
+
     <item android:id="@+id/navigation_favorites"
         android:icon="@drawable/ic_baseline_favorite_menu_24"
         android:title="@string/navigation_favorites"/>

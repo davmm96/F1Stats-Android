@@ -6,8 +6,8 @@
     style="@style/LinearLayout">
 
     <TextView
-        android:id="@+id/tvSettings"
-        android:text="@string/favoritestv"
+        android:id="@+id/tvFavorites"
+        android:text="@string/navigation_favorites"
         style="@style/TextPrimary.title"/>
 
     <androidx.recyclerview.widget.RecyclerView

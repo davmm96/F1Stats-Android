@@ -28,10 +28,9 @@ import kotlinx.coroutines.withContext
 
 class RacesFragment : Fragment() {
 
-    //private val url = "https://v1.formula-1.api-sports.io/"
-    private val url = "https://v1.formula-1.api-sports.io/races?type=race&season=2022"
+    private val url = "https://v1.formula-1.api-sports.io/"
+    //private val url = "https://v1.formula-1.api-sports.io/races?type=race&season=2022"
     private val headers = mutableMapOf<String,String>()
-    private lateinit var raceAdapter : RacesAdapter
     private lateinit var db: FavoriteRacesDatabase
 
 

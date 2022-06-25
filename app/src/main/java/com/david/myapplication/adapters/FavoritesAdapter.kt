@@ -1,14 +1,12 @@
-package com.david.myapplication
+package com.david.myapplication.adapters
 
-import android.Manifest
-import android.content.pm.PackageManager
-import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.david.myapplication.R
 import com.david.myapplication.databinding.ItemRaceBinding
 import com.david.myapplication.model.FavoriteRace
 

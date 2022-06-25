@@ -1,13 +1,12 @@
-package com.david.myapplication
+package com.david.myapplication.adapters
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.david.myapplication.R
 import com.david.myapplication.databinding.ItemRaceBinding
 import com.david.myapplication.model.FavoriteRace
 import com.david.myapplication.model.Race

@@ -1,4 +1,4 @@
-package com.david.myapplication
+package com.david.myapplication.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,10 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.david.myapplication.R
 import com.david.myapplication.databinding.ItemCircuitBinding
-import com.david.myapplication.databinding.ItemRaceBinding
 import com.david.myapplication.model.CircuitData
-import com.david.myapplication.model.FavoriteRace
 
 
 class CircuitsAdapter (private val circuits: List<CircuitData>, val listener: (String, String) -> Unit) :

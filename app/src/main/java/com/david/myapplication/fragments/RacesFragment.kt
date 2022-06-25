@@ -1,7 +1,6 @@
 package com.david.myapplication.fragments
 
 import android.annotation.SuppressLint
-import android.annotation.TargetApi
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,16 +9,13 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
-import com.david.myapplication.FavoritesAdapter
 import com.david.myapplication.R
-import com.david.myapplication.RacesAdapter
+import com.david.myapplication.adapters.RacesAdapter
 import com.david.myapplication.db.FavoriteRacesDatabase
-import com.david.myapplication.model.FavoriteRace
 import com.david.myapplication.model.Race
 import com.david.myapplication.model.Races
 import com.david.myapplication.network.GsonRequest
 import com.david.myapplication.network.RequestManager
-import kotlinx.android.synthetic.main.fragment_favorites.*
 import kotlinx.android.synthetic.main.fragment_races.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

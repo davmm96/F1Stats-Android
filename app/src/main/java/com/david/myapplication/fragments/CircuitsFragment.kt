@@ -19,23 +19,13 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.room.Room
-import com.david.myapplication.CircuitsAdapter
+import com.david.myapplication.adapters.CircuitsAdapter
 import com.david.myapplication.R
-import com.david.myapplication.RacesAdapter
-import com.david.myapplication.db.FavoriteRacesDatabase
 import com.david.myapplication.model.CircuitData
 import com.david.myapplication.model.Circuits
-import com.david.myapplication.model.Race
-import com.david.myapplication.model.Races
 import com.david.myapplication.network.GsonRequest
 import com.david.myapplication.network.RequestManager
 import kotlinx.android.synthetic.main.fragment_circuits.*
-import kotlinx.android.synthetic.main.fragment_races.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import java.io.File
 
 class CircuitsFragment: Fragment() {

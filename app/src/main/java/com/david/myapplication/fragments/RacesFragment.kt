@@ -9,21 +9,30 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.room.Room
+import com.david.myapplication.FavoritesAdapter
 import com.david.myapplication.R
 import com.david.myapplication.RacesAdapter
+import com.david.myapplication.db.FavoriteRacesDatabase
+import com.david.myapplication.model.FavoriteRace
 import com.david.myapplication.model.Race
 import com.david.myapplication.model.Races
 import com.david.myapplication.network.GsonRequest
 import com.david.myapplication.network.RequestManager
+import kotlinx.android.synthetic.main.fragment_favorites.*
 import kotlinx.android.synthetic.main.fragment_races.*
-import kotlinx.android.synthetic.main.item_race.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class RacesFragment : Fragment() {
 
-    private val url = "https://v1.formula-1.api-sports.io/"
-    //private val url = "https://v1.formula-1.api-sports.io/races?type=race&season=2022"
+    //private val url = "https://v1.formula-1.api-sports.io/"
+    private val url = "https://v1.formula-1.api-sports.io/races?type=race&season=2022"
     private val headers = mutableMapOf<String,String>()
     private lateinit var raceAdapter : RacesAdapter
+    private lateinit var db: FavoriteRacesDatabase
 
 
     companion object {
@@ -48,16 +57,33 @@ class RacesFragment : Fragment() {
             Toast.makeText(activity, getString(R.string.races_error), Toast.LENGTH_SHORT).show()
         })
 
-
         RequestManager.getInstance(requireActivity()).addToRequestQueue(gsonRequest)
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun showRaces(racesResponse: List<Race>) {
-        raceAdapter = RacesAdapter(racesResponse)
-        rvRaces.layoutManager = LinearLayoutManager(activity)
-        rvRaces.adapter = raceAdapter
-        raceAdapter.notifyDataSetChanged()
+    private fun showRaces(racesResponse: List<Race>)
+    {
+        GlobalScope.launch (Dispatchers.IO){
+            db = Room.databaseBuilder(
+                requireActivity(),
+                FavoriteRacesDatabase::class.java, "favoritesDB"
+            ).build()
+
+            val favRacesIds: List<Int> = db.favoriteRacesDao().getAllIds()
+
+            withContext(Dispatchers.Main) {
+                rvRaces.layoutManager = LinearLayoutManager(activity)
+                rvRaces.adapter = RacesAdapter(racesResponse, favRacesIds) { favoriteRace ->
+                    GlobalScope.launch (Dispatchers.IO)
+                    {
+                        db.favoriteRacesDao().insert(favoriteRace)
+                        withContext(Dispatchers.Main) {
+                            Toast.makeText(activity, getString(R.string.race_added), Toast.LENGTH_LONG).show()
+                        }
+                    }
+                }
+            }
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

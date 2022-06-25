@@ -7,13 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CompoundButton
 import androidx.fragment.app.Fragment
+import androidx.room.Room
 import com.david.myapplication.R
 import com.david.myapplication.background.MusicService
 import com.david.myapplication.background.PreferencesManager
+import com.david.myapplication.db.FavoriteRacesDatabase
+import com.david.myapplication.model.FavoriteRace
 import kotlinx.android.synthetic.main.fragment_settings.*
 import kotlinx.android.synthetic.main.fragment_settings.view.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class SettingsFragment: Fragment() {
+
+    private lateinit var db: FavoriteRacesDatabase
 
     companion object {
         fun newInstance(): SettingsFragment{

@@ -1,19 +1,35 @@
 package com.david.myapplication
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.david.myapplication.databinding.ItemRaceBinding
+import com.david.myapplication.model.FavoriteRace
 import com.david.myapplication.model.Race
 
-class RacesAdapter (private val races: List<Race>) :
+class RacesAdapter (private val races: List<Race>, private val favRacesIds: List<Int>, val listener: (FavoriteRace) -> Unit) :
     RecyclerView.Adapter<RacesAdapter.RaceViewHolder>(){
 
     override fun onBindViewHolder(holderRace: RaceViewHolder, position: Int)
     {
         val item = races[position]
-        holderRace.bind(item)
+        holderRace.bind(item, favRacesIds)
+
+        holderRace.ivFavorite.setOnClickListener{
+            listener(FavoriteRace(item.id,
+                    item.competition.location.country,
+                    item.competition.name,
+                    item.laps.total,
+                    item.season,
+                    item.circuit.image,
+            true)
+            )
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = RaceViewHolder(
@@ -26,15 +42,29 @@ class RacesAdapter (private val races: List<Race>) :
 
         private val binding = ItemRaceBinding.bind(view)
 
-        fun bind(race: Race) {
-            binding.tvCountry.text = race.competition.location.country
-            binding.tvName.text = race.competition.name
-            binding.tvLaps.text = (race.laps.total).toString().plus(" laps")
-            binding.tvSeason.text = (race.season).toString()
+        var idItem: Int = -1
+        var tvCountry: TextView = binding.tvCountry
+        var tvName: TextView = binding.tvName
+        var tvLaps: TextView = binding.tvLaps
+        var tvSeason: TextView = binding.tvSeason
+        var ivFavorite: ImageView = binding.ivFavorite
 
-            binding.ivFavorite.setOnClickListener{
-                binding.ivFavorite.setImageResource(R.drawable.ic_baseline_favorite_on_24)
+        fun bind(race: Race, favRacesIds: List<Int>) {
+            idItem = race.id
+            tvCountry.text = race.competition.location.country
+            tvName.text = race.competition.name
+            tvLaps.text = (race.laps.total).toString().plus(" laps")
+            tvSeason.text = (race.season).toString()
+
+            if(favRacesIds.contains(race.id))
+            {
+                ivFavorite.setImageResource(R.drawable.ic_baseline_favorite_on_24)
             }
+            else
+            {
+                ivFavorite.setImageResource(R.drawable.ic_baseline_favorite_off_24)
+            }
+            
         }
     }
 }

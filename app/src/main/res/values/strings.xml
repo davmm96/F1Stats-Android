@@ -8,4 +8,6 @@
     <string name="apikey">034da704a4fcc0f36f7f6c59b86529ff</string>
     <string name="seasontv">Season 2022</string>
     <string name="favoritestv">Favorites</string>
+    <string name="race_added">Race added!</string>
+    <string name="race_deleted">Race deleted!</string>
 </resources>

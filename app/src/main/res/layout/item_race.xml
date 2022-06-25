@@ -70,7 +70,7 @@
             android:id="@+id/arrow"
             android:layout_width="@dimen/race_item_arrow_size"
             android:layout_height="@dimen/race_item_arrow_size"
-            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:src="@drawable/ic_baseline_file_download_24"
             android:layout_alignParentEnd="true"
             android:clickable="true"/>
 

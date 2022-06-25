@@ -6,5 +6,6 @@
     <string name="races_error">Error obtaining data</string>
     <string name="apikey_header">x-apisports-key</string>
     <string name="apikey">034da704a4fcc0f36f7f6c59b86529ff</string>
-    <string name="api_url_races"><![CDATA[/races?type=race&season=2022]]></string>
+    <string name="seasontv">Season 2022</string>
+    <string name="favoritestv">Favorites</string>
 </resources>

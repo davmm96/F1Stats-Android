@@ -31,6 +31,10 @@ class RacesAdapter (private val races: List<Race>) :
             binding.tvName.text = race.competition.name
             binding.tvLaps.text = (race.laps.total).toString().plus(" laps")
             binding.tvSeason.text = (race.season).toString()
+
+            binding.ivFavorite.setOnClickListener{
+                binding.ivFavorite.setImageResource(R.drawable.ic_baseline_favorite_on_24)
+            }
         }
     }
 }

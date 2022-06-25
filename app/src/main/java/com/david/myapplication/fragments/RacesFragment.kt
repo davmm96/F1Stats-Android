@@ -1,6 +1,7 @@
 package com.david.myapplication.fragments
 
 import android.annotation.SuppressLint
+import android.annotation.TargetApi
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,10 +16,12 @@ import com.david.myapplication.model.Races
 import com.david.myapplication.network.GsonRequest
 import com.david.myapplication.network.RequestManager
 import kotlinx.android.synthetic.main.fragment_races.*
+import kotlinx.android.synthetic.main.item_race.*
 
 class RacesFragment : Fragment() {
 
-    private val url = getString(R.string.api_url_races)
+    private val url = "https://v1.formula-1.api-sports.io/"
+    //private val url = "https://v1.formula-1.api-sports.io/races?type=race&season=2022"
     private val headers = mutableMapOf<String,String>()
     private lateinit var raceAdapter : RacesAdapter
 
@@ -51,7 +54,6 @@ class RacesFragment : Fragment() {
 
     @SuppressLint("NotifyDataSetChanged")
     private fun showRaces(racesResponse: List<Race>) {
-
         raceAdapter = RacesAdapter(racesResponse)
         rvRaces.layoutManager = LinearLayoutManager(activity)
         rvRaces.adapter = raceAdapter

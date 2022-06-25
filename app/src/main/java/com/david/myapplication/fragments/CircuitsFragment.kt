@@ -19,6 +19,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.david.myapplication.BuildConfig
 import com.david.myapplication.adapters.CircuitsAdapter
 import com.david.myapplication.R
 import com.david.myapplication.model.CircuitData
@@ -29,9 +30,6 @@ import kotlinx.android.synthetic.main.fragment_circuits.*
 import java.io.File
 
 class CircuitsFragment: Fragment() {
-
-    //private val url = "https://v1.formula-1.api-sports.io/"
-    private val url = "https://v1.formula-1.api-sports.io/circuits"
     private val WRITE_EXTERNAL_STORAGE_PERMISSION_CODE = 1
     private val headers = mutableMapOf<String,String>()
 
@@ -48,14 +46,14 @@ class CircuitsFragment: Fragment() {
 
     private fun doRequest() {
 
-        headers[getString(R.string.apikey_header)] = getString(R.string.apikey)
+        headers[BuildConfig.API_HEADER] = BuildConfig.API_KEY
 
-        val gsonRequest = GsonRequest(url, Circuits::class.java, headers,
+        val gsonRequest = GsonRequest(BuildConfig.API_URL_CIRCUITS, Circuits::class.java, headers,
             {
                     response -> showRaces(response.circuits.toList())
             },
             {
-                Toast.makeText(activity, getString(R.string.races_error), Toast.LENGTH_SHORT).show()
+                Toast.makeText(activity, getString(R.string.data_error), Toast.LENGTH_SHORT).show()
             })
 
         RequestManager.getInstance(requireActivity()).addToRequestQueue(gsonRequest)

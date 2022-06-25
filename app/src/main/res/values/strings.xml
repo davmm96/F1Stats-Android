@@ -3,9 +3,7 @@
     <string name="navigation_races">Races</string>
     <string name="navigation_favorites">Favorites</string>
     <string name="navigation_settings">Settings</string>
-    <string name="races_error">Error obtaining data</string>
-    <string name="apikey_header">x-apisports-key</string>
-    <string name="apikey">034da704a4fcc0f36f7f6c59b86529ff</string>
+    <string name="data_error">Error obtaining data</string>
     <string name="seasontv">Season 2022</string>
     <string name="race_added">Race added!</string>
     <string name="race_deleted">Race deleted!</string>

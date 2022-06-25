@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import com.david.myapplication.BuildConfig
 import com.david.myapplication.R
 import com.david.myapplication.adapters.RacesAdapter
 import com.david.myapplication.db.FavoriteRacesDatabase
@@ -24,10 +25,10 @@ import kotlinx.coroutines.withContext
 
 class RacesFragment : Fragment() {
 
-    private val url = "https://v1.formula-1.api-sports.io/"
-    //private val url = "https://v1.formula-1.api-sports.io/races?type=race&season=2022"
     private val headers = mutableMapOf<String,String>()
     private lateinit var db: FavoriteRacesDatabase
+
+
 
 
     companion object {
@@ -42,14 +43,14 @@ class RacesFragment : Fragment() {
 
     private fun doRequest() {
 
-        headers[getString(R.string.apikey_header)] = getString(R.string.apikey)
+        headers[BuildConfig.API_HEADER] = BuildConfig.API_KEY
 
-        val gsonRequest = GsonRequest(url, Races::class.java, headers,
+        val gsonRequest = GsonRequest(BuildConfig.API_URL_RACES, Races::class.java, headers,
         {
             response -> showRaces(response.races.toList())
         },
         {
-            Toast.makeText(activity, getString(R.string.races_error), Toast.LENGTH_SHORT).show()
+            Toast.makeText(activity, getString(R.string.data_error), Toast.LENGTH_SHORT).show()
         })
 
         RequestManager.getInstance(requireActivity()).addToRequestQueue(gsonRequest)

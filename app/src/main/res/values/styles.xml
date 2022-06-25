@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LinearLayout">
+        <item name="android:paddingEnd">@dimen/fragment_races_padding</item>
+        <item name="android:paddingLeft">@dimen/fragment_races_padding</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/background_grey</item>
+    </style>
+    <style name="TextPrimary" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextPrimary.title">
+        <item name="android:textSize">@dimen/settings_label_size</item>
+        <item name="android:layout_marginTop">@dimen/title_margin</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="TextPrimary.laps">
+        <item name="android:textSize">@dimen/laps_label_size</item>
+    </style>
+    <style name="TextBlack" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="TextBlack.RaceTitle">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextBlack.SettingsTitle">
+        <item name="android:textSize">@dimen/music_text_size</item>
+        <item name="android:layout_marginTop">@dimen/music_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/music_margin_left</item>
+    </style>
+    <style name="TextRaceItem" parent="Widget.AppCompat.TextView">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/race_item_name_size</item>
+        <item name="android:layout_marginTop">@dimen/race_item_name_margin</item>
+    </style>
+    <style name="RV">
+        <item name="android:paddingTop">@dimen/rv_padding</item>
+    </style>
+</resources>

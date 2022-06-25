@@ -19,10 +19,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="58 laps"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"/>
+            android:layout_alignParentStart="true"
+            style="@style/TextPrimary.laps"/>
 
         <ImageView
             android:id="@+id/iv_favorite"
@@ -41,9 +40,8 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="@dimen/race_item_country_margin"
             android:layout_toEndOf="@id/tv_laps"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            tools:text="Abu Dhabi" />
+            tools:text="Abu Dhabi"
+            style="@style/TextBlack.RaceTitle"/>
 
         <TextView
             android:id="@+id/tv_name"
@@ -52,9 +50,7 @@
             android:layout_below="@id/tv_country"
             android:layout_alignStart="@id/tv_country"
             tools:text="Abu Dhabi Grand Prix"
-            android:textAllCaps="true"
-            android:textSize="@dimen/race_item_name_size"
-            android:layout_marginTop="@dimen/race_item_name_margin"/>
+            style="@style/TextRaceItem"/>
 
         <TextView
             android:id="@+id/tv_season"
@@ -63,17 +59,7 @@
             android:layout_below="@id/tv_name"
             android:layout_alignStart="@id/tv_name"
             tools:text="2022"
-            android:textSize="@dimen/race_item_name_size"
-            android:layout_marginTop="@dimen/race_item_name_margin"/>
-
-        <ImageView
-            android:id="@+id/iv_download"
-            android:layout_width="@dimen/race_item_arrow_size"
-            android:layout_height="@dimen/race_item_arrow_size"
-            android:src="@drawable/ic_baseline_file_download_24"
-            android:layout_alignParentEnd="true"
-            android:clickable="true"/>
-
+            style="@style/TextRaceItem"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

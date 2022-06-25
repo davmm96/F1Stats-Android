@@ -11,25 +11,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/navigation_settings"
-        android:textColor="@color/primary"
-        android:textStyle="bold"
-        android:textSize="@dimen/settings_label_size"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="@dimen/settings_margin"
-        android:layout_marginTop="@dimen/settings_margin"/>
+        android:layout_marginStart="20dp"
+        style="@style/TextPrimary.title"/>
 
     <TextView
         android:id="@+id/tvMusic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Music"
-        android:textColor="@color/black"
-        android:textSize="@dimen/music_text_size"
         app:layout_constraintTop_toBottomOf="@id/tvSettings"
         app:layout_constraintLeft_toLeftOf="@id/tvSettings"
-        android:layout_marginTop="@dimen/music_margin_top"
-        android:layout_marginLeft="@dimen/music_margin_left"/>
+        style="@style/TextBlack.SettingsTitle"/>
 
     <ImageView
         android:id="@+id/ivMusicOn"

@@ -3,25 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingEnd="@dimen/fragment_races_padding"
-    android:paddingLeft="@dimen/fragment_races_padding"
-    android:orientation="vertical"
-    android:background="@color/background_grey">
+    style="@style/LinearLayout">
 
     <TextView
         android:id="@+id/tvSettings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/favoritestv"
-        android:textColor="@color/primary"
-        android:textStyle="bold"
-        android:textSize="@dimen/settings_label_size"
-        android:layout_marginTop="@dimen/settings_margin"/>
+        style="@style/TextPrimary.title"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvFavorites"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="@dimen/settings_margin"/>
+        style="@style/RV"/>
 
 </LinearLayout>

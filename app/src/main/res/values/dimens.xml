@@ -10,9 +10,11 @@
     <dimen name="race_item_name_margin">5dp</dimen>
     <dimen name="race_item_arrow_size">20dp</dimen>
     <dimen name="settings_label_size">30sp</dimen>
-    <dimen name="settings_margin">20dp</dimen>
+    <dimen name="title_margin">20dp</dimen>
     <dimen name="music_text_size">20sp</dimen>
     <dimen name="music_margin_top">30dp</dimen>
     <dimen name="music_margin_left">10dp</dimen>
     <dimen name="ivMusic_margin_top">25dp</dimen>
+    <dimen name="laps_label_size">15sp</dimen>
+    <dimen name="rv_padding">20dp</dimen>
 </resources>

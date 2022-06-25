@@ -38,4 +38,9 @@
     <style name="RV">
         <item name="android:paddingTop">@dimen/rv_padding</item>
     </style>
+    <style name="cardItem">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">@dimen/race_item_corner</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
 </resources>

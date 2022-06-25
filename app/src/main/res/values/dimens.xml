@@ -17,4 +17,12 @@
     <dimen name="ivMusic_margin_top">25dp</dimen>
     <dimen name="laps_label_size">15sp</dimen>
     <dimen name="rv_padding">20dp</dimen>
+    <dimen name="circuit_item_height">250dp</dimen>
+    <dimen name="circuit_title_size">15sp</dimen>
+    <dimen name="circuit_country_size">12sp</dimen>
+    <dimen name="iv_download_margin_top">7dp</dimen>
+    <dimen name="circuit_label_margin">15dp</dimen>
+    <dimen name="circuit_data_margin">5dp</dimen>
+    <dimen name="circuit_margin_left_label">40dp</dimen>
+    <dimen name="circuit_fl_driver_label">7sp</dimen>
 </resources>

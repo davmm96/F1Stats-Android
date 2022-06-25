@@ -10,4 +10,8 @@
     <string name="race_added">Race added!</string>
     <string name="race_deleted">Race deleted!</string>
     <string name="navigation_circuits">Circuits</string>
+    <string name="circuit_length_label">Circuit length</string>
+    <string name="laps_label">Laps</string>
+    <string name="first_grand_prix_label">First Grand Prix</string>
+    <string name="lap_record_label">Lap record</string>
 </resources>

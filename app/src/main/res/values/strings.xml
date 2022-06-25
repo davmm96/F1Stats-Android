@@ -12,4 +12,7 @@
     <string name="laps_label">Laps</string>
     <string name="first_grand_prix_label">First Grand Prix</string>
     <string name="lap_record_label">Lap record</string>
+    <string name="music_label">Music</string>
+    <string name="version_label">Version</string>
+    <string name="version_free_text">Free</string>
 </resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AppIconAttrs">
+        <attr name="appicon_image" format="reference" />
+        <attr name="appicon_title" format="string" />
+        <attr name="appicon_gradient" format="reference" />
+    </declare-styleable>
+</resources>

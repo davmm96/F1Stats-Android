@@ -25,4 +25,5 @@
     <dimen name="circuit_data_margin">5dp</dimen>
     <dimen name="circuit_margin_left_label">40dp</dimen>
     <dimen name="circuit_fl_driver_label">7sp</dimen>
+    <dimen name="corner_logo">20dp</dimen>
 </resources>

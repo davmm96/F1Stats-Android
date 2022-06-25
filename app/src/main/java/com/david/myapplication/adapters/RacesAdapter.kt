@@ -20,6 +20,7 @@ class RacesAdapter (private val races: List<Race>, private val favRacesIds: List
         holderRace.bind(item, favRacesIds)
 
         holderRace.ivFavorite.setOnClickListener{
+            holderRace.ivFavorite.setImageResource(R.drawable.ic_baseline_favorite_on_24)
             listener(FavoriteRace(item.id,
                     item.competition.location.country,
                     item.competition.name,

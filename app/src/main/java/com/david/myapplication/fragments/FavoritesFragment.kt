@@ -57,7 +57,7 @@ class FavoritesFragment: Fragment() {
                         )
                         withContext(Dispatchers.Main) {
                             (rvFavorites.adapter as FavoritesAdapter).notifyDataSetChanged()
-                            Toast.makeText(activity, getString(R.string.race_deleted), Toast.LENGTH_LONG).show()
+                            Toast.makeText(activity, getString(R.string.race_deleted), Toast.LENGTH_SHORT).show()
                         }
                     }
                 }

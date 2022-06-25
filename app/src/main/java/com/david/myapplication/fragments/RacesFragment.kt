@@ -74,7 +74,7 @@ class RacesFragment : Fragment() {
                     {
                         db.favoriteRacesDao().insert(favoriteRace)
                         withContext(Dispatchers.Main) {
-                            Toast.makeText(activity, getString(R.string.race_added), Toast.LENGTH_LONG).show()
+                            Toast.makeText(activity, getString(R.string.race_added), Toast.LENGTH_SHORT).show()
                         }
                     }
                 }

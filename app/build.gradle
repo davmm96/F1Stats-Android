@@ -22,8 +22,8 @@ android {
 
         debug {
             applicationIdSuffix ".pre"
-            buildConfigField "String", "API_URL_RACES", "\"https://v1.formula-1.api-sports.io/races?season=2022&type=race\""
-            buildConfigField "String", "API_URL_CIRCUITS", "\"https://v1.formula-1.api-sports.io/circuits\""
+            buildConfigField "String", "API_URL_RACES", "\"https://v1.formula-1.api-sports.io/\""
+            buildConfigField "String", "API_URL_CIRCUITS", "\"https://v1.formula-1.api-sports.io/\""
             buildConfigField "String", "API_KEY", "\"034da704a4fcc0f36f7f6c59b86529ff\""
             buildConfigField "String", "API_HEADER", "\"x-apisports-key\""
             debuggable true
